@@ -19,6 +19,13 @@
   object-fit: cover;
 }
 
+#liquid-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -999;
+  pointer-events: none;
+}
+
 body {
   background: linear-gradient(180deg, var(--black), var(--dark));
   color: var(--text);
@@ -177,4 +184,5 @@ footer {
   nav a { margin-left: 14px; }
   .hero h1 { font-size: 2.2rem; }
 }
+
 
