@@ -1,9 +1,8 @@
 import LiquidBackground from 'https://cdn.jsdelivr.net/npm/threejs-components@0.0.27/build/backgrounds/liquid1.min.js'
 
 (function () {
-  // HTML'de açık mı?
+  // HTML'de aktif mi?
   if (!document.body.hasAttribute('data-liquid-bg')) return
-
   if (document.getElementById('liquid-canvas')) return
 
   const canvas = document.createElement('canvas')
@@ -12,9 +11,13 @@ import LiquidBackground from 'https://cdn.jsdelivr.net/npm/threejs-components@0.
 
   const app = LiquidBackground(canvas)
 
-  app.loadImage('https://assets.codepen.io/33787/liquid.webp')
-  app.liquidPlane.material.metalness = 0.75
-  app.liquidPlane.material.roughness = 0.25
-  app.liquidPlane.uniforms.displacementScale.value = 5
+  // ❌ GÖRSEL YOK
+  // app.loadImage(...)
+
+  // Liquid ayarları
+  app.liquidPlane.material.color.set('#1a0f2e') // koyu mor (isteğe bağlı)
+  app.liquidPlane.material.metalness = 0.8
+  app.liquidPlane.material.roughness = 0.3
+  app.liquidPlane.uniforms.displacementScale.value = 4
   app.setRain(false)
 })()
