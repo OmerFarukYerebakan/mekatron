@@ -132,6 +132,10 @@ section h2 {
   padding-left: 40px;
 }
 
+.current {
+  color: var(--purple);
+}
+
 .update {
   position: relative;
   margin-bottom: 50px;
